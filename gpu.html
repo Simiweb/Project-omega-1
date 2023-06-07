@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Grafikkarte</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -100%;
+            margin-top: -5%;
+            margin-left: 75%;
+
+        }
+
+        .pc {
+            border: solid #fff 5px;
+
+        }
+
+
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+
+        .server4 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Die Grafikkarte</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="gpu title.webp" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="gpu 1.jpg" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="gpu 2.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="gpu 3.jpg" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="gpu 4.webp" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+        <img class="server2" src="gpu 5.jpg" alt="Setup" style="width: 70%;">
+
+
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            Die Grafikkarte, auch bekannt als Graphics Processing Unit (GPU), ist eine wichtige Komponente eines PCs,
+            die für die Darstellung von Grafiken, Videos und die Ausführung von anspruchsvollen visuellen Berechnungen
+            verantwortlich ist. Hier sind Informationen über die Grafikkarte und ihre Funktionen:
+        </p>
+        <br> <br>
+        <p>
+            1. Grafische Darstellung: Die Hauptfunktion einer Grafikkarte besteht darin, visuelle Inhalte auf dem
+            Bildschirm anzuzeigen. Sie verarbeitet Grafikdaten und erzeugt Bilder, Videos und 3D-Grafiken, die auf dem
+            Monitor angezeigt werden. Die GPU verfügt über spezielle Schaltkreise und Prozessoren, die für die schnelle
+            Verarbeitung und Darstellung von visuellen Elementen optimiert sind.
+        </p>
+        <br> <br>
+        <p>
+            2. 3D-Beschleunigung: Grafikkarten sind besonders für die Verarbeitung von 3D-Grafiken und -Effekten
+            wichtig. Sie enthalten spezielle Hardware- und Softwarekomponenten, die eine schnelle Berechnung und
+            Darstellung von 3D-Objekten ermöglichen. Dies ist insbesondere für Computerspiele, 3D-Modellierung und
+            Animationen von Bedeutung.
+        </p>
+        <br> <br>
+        <p>
+            3. Video- und Bildverarbeitung: Die GPU ist auch für die Beschleunigung der Video- und Bildverarbeitung
+            verantwortlich. Sie unterstützt die Dekodierung und Codierung von Videos in verschiedenen Formaten und
+            Auflösungen. Die Grafikkarte kann auch Bildverbesserungen wie Kantenglättung, Texturfilterung und
+            Farbkorrektur durchführen, um eine bessere visuelle Qualität zu erzielen.
+        </p>
+        <br> <br>
+        <p>
+            4. GPGPU-Berechnungen: Moderne Grafikkarten bieten auch die Möglichkeit der sogenannten General-Purpose
+            Computing on Graphics Processing Units (GPGPU). Das bedeutet, dass die GPU nicht nur für grafikbezogene
+            Aufgaben verwendet werden kann, sondern auch für allgemeine Berechnungen eingesetzt werden kann. Dies wird
+            besonders in Bereichen wie wissenschaftlicher Forschung, Kryptowährungsmine und maschinellem Lernen genutzt,
+            da die parallele Verarbeitungsfähigkeit der GPU eine enorme Rechenleistung bieten kann.
+        </p>
+        <br> <br>
+        <p>
+            5. Speicher und Schnittstellen: Grafikkarten verfügen über einen eigenen spezialisierten Speicher, der als
+            Grafikspeicher oder VRAM bezeichnet wird. Dieser Speicher ermöglicht es der GPU, Grafikdaten schnell
+            abzurufen und zu verarbeiten. Grafikkarten sind auch mit verschiedenen Schnittstellen ausgestattet, wie z.B.
+            HDMI, DisplayPort oder DVI, um eine Verbindung zum Monitor herzustellen.
+        </p>
+        <br> <br>
+        <p>
+            Die Grafikkarte spielt eine entscheidende Rolle bei der visuellen Leistung eines PCs, insbesondere bei
+            grafikintensiven Aufgaben wie Gaming, Videobearbeitung und 3D-Modellierung. Eine leistungsstarke Grafikkarte
+            ermöglicht eine flüssige Darstellung von Grafiken, schnelle Berechnungen und eine verbesserte visuelle
+            Qualität. Beim Kauf einer Grafikkarte ist es wichtig, die individuellen Anforderungen, das Budget und die
+            Kompatibilität mit anderen PC-Komponenten zu berücksichtigen.
+        </p>
+        <br> <br>
+
+
+    </div>
+</body>
+
+</html>

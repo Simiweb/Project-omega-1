@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -90%;
+            margin-top: -15%;
+            margin-left: 75%;
+        }
+
+        .pc {
+            border: solid #fff 5px;
+            size: 100%;
+        }
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Server</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="server_129.jpg" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="server racks.jpg" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="Server-Management-NinjaOne-Blog-Banner.avif" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="server lap.jpg" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="server bild.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server2" src="server-wtb-promo-1260x500_0.webp" alt="Setup" style="width: 70%;">
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            Server sind leistungsstarke Computer oder Computersysteme, die für die Speicherung, Verarbeitung und
+            Bereitstellung von Daten und Diensten in Netzwerken verantwortlich sind. Sie spielen eine entscheidende
+            Rolle in verschiedenen Bereichen und haben zahlreiche Anwendungen.
+        </p>
+        <br>
+        <p>
+            Eine der grundlegenden Funktionen eines Servers besteht darin, Dateien und Daten bereitzustellen, die von
+            anderen Computern oder Geräten in einem Netzwerk angefordert werden. Dies geschieht über das
+            Client-Server-Modell, bei dem der Server auf Anfragen von Clients reagiert und ihnen die gewünschten
+            Informationen zur Verfügung stellt.
+
+        </p>
+        <br>
+        <p>
+            Server werden in vielen unterschiedlichen Bereichen eingesetzt. In Unternehmen dienen sie beispielsweise zur
+            zentralen Speicherung und Verwaltung von Daten, zum Hosting von Websites und zur Bereitstellung von
+            E-Mail-Diensten. Durch den Einsatz von Servern können Mitarbeiter auf gemeinsame Ressourcen zugreifen, Daten
+            sicher speichern und gemeinsam an Projekten arbeiten.
+
+        </p>
+        <br>
+        <p>
+            Darüber hinaus gibt es spezielle Server für bestimmte Anwendungen. Ein Beispiel dafür sind die sogenannten
+            Game-Server. Diese spezialisierten Server werden in Online-Spielen verwendet, um Spielern das gemeinsame
+            Spielen in Echtzeit zu ermöglichen. Game-Server stellen die Verbindung zwischen den Spielern her,
+            synchronisieren deren Aktionen und ermöglichen das reibungslose Zusammenspiel in einer virtuellen Umgebung.
+        </p>
+        <br>
+        <p>
+            Game-Server sind besonders wichtig für Massively Multiplayer Online Games (MMOGs), bei denen Tausende von
+            Spielern gleichzeitig miteinander interagieren können. Sie sorgen dafür, dass Spieler in der Lage sind, in
+            einer gemeinsamen Welt zu spielen, miteinander zu kommunizieren, Ressourcen zu teilen und Wettkämpfe
+            auszutragen.
+
+
+        </p>
+        <br>
+        <p>
+            Die Leistungsfähigkeit von Game-Servern ist entscheidend für das Spielerlebnis. Ein gut konfigurierter und
+            stabiler Game-Server gewährleistet eine geringe Latenzzeit, eine hohe Zuverlässigkeit und eine schnelle
+            Verarbeitung der Spielaktionen. Dadurch können Spieler ohne Verzögerungen miteinander interagieren und ein
+            reibungsloses Spielerlebnis genießen.
+
+
+        </p>
+        <br>
+        <p>
+            Zusammenfassend lässt sich sagen, dass Server eine vielseitige Rolle in der Computertechnologie spielen. Sie
+            dienen als Speicher- und Bereitstellungseinheiten für Daten und Dienste in Netzwerken. Von
+            Unternehmensnetzwerken bis hin zu spezialisierten Game-Servern tragen sie dazu bei, dass Menschen
+            miteinander kommunizieren, Informationen teilen und digitale Erlebnisse genießen können.
+        </p>
+    </div>
+    <div class="server">
+        <img src="Client-Server-Computing.png" alt="software" style="width: 50%;" />
+    </div>
+</body>
+
+</html>

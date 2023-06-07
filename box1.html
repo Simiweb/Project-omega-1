@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betriebsystem</title>
+    <meta name="robots" content="noindex">
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+
+
+        .windows {
+            z-index: 1;
+            margin-top: 5%;
+            display: inline-block;
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+
+        .windowstext {
+            z-index: 1;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 4%;
+            font-size: 25px;
+        }
+
+
+
+        .iostext {
+            position: relative;
+            display: inline-block;
+            font-size: 25px;
+            color: #fff;
+            max-width: 35%;
+            margin-left: 5%;
+            margin-top: 6%;
+
+        }
+
+        .ios {
+            flex: 0 0 calc(50% - 20px);
+            display: inline-block;
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-right: -12%;
+            margin-bottom: -8%;
+        }
+
+        .linux {
+            margin-top: 7%;
+            display: inline-block;
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            border: solid 10px;
+            margin-right: 50px;
+            margin-left: 7%;
+            background-color: #fff;
+
+        }
+
+        .linuxtext {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 12%;
+            font-size: 25px;
+            margin-left: 8%;
+
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        @media screen and (max-width: 100%) {
+            .title-text {
+                top: 40%;
+                font-size: medium;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size: 50px;">Die Betriebssysteme</h1>
+        </div>
+    </div>
+    <div class="windows">
+        <img src="windows-Logo.png" alt="Windows" style="width: 80%;" />
+    </div>
+    <div class="windowstext">
+        <h1 style="font-size: 60px ;">Windows</h1>
+        <p>
+            Windows ist ein Betriebssystem von Microsoft, das auf Computern und anderen Geräten verwendet wird. Es
+            bietet eine einfache Benutzeroberfläche, mit der man Anwendungen starten und Dateien verwalten kann. Windows
+            enthält viele nützliche Anwendungen wie den Internet-Browser und Microsoft Office.
+        </p>
+        <p>
+            Das Betriebssystem unterstützt viele verschiedene Geräte wie z.B. Drucker und Scanner und wird ständig
+            aktualisiert, um die Sicherheit und Leistung zu verbessern. Windows ist das am meisten genutzte
+            Betriebssystem auf der Welt und hat einen großen Einfluss auf die Art und Weise, wie wir arbeiten, lernen
+            und kommunizieren.
+        </p>
+    </div>
+    <div class="wrapper">
+        <div class="iostext">
+            <h1>iOS</h1>
+            <p>iOS ist ein Betriebssystem, das von Apple entwickelt wurde und auf iPhones, iPads und iPod
+                Touch-GerätenEs zeichnet sich durch seine Benutzerfreundlichkeit, Sicherheit und nahtlose Integration
+                mit anderen Apple-Geräten aus. Mit einer breiten Palette von Apps aus dem App Store bietet iOS eine
+                Vielzahl von Funktionen und Diensten. Apple aktualisiert das Betriebssystem regelmäßig, um neue
+                Funktionen hinzuzufügen und die Leistung zu verbessern. Neben iOS gibt es auch das macOS-Betriebssystem,
+                das auf MacBooks und anderen Apple-Computern läuft.
+                läuft.</p>
+        </div>
+        <div class="ios">
+            <img src="ios logo.png" alt="iOS" style="width: 40%  ;">
+        </div>
+    </div>
+    <div class="linux">
+        <img src="Linux-Logo.png" alt="Windows" style="width: 100%;" />
+    </div>
+</body>
+<div class="linuxtext">
+    <h1 style="font-size: 60px ;">Linux</h1>
+    <p>
+        Linux ist ein vielseitiges Betriebssystem, das stabil, sicher und flexibel ist. Es wird auf Servern, Computern,
+        Smartphones und anderen Geräten verwendet. Es gibt verschiedene Versionen von Linux, die das Herzstück des
+        Betriebssystems mit zusätzlicher Software ergänzen. Linux bietet auch viele kostenlose Programme. Entwickler
+        können ihre eigenen Anwendungen für Linux erstellen.Linux ist ein Betriebssystem, das von einer großen Community
+        von Entwicklern ständig weiterentwickelt wird. Es ist frei verfügbar, was bedeutet, dass es kostenlos genutzt
+        und angepasst werden kann. Diese Offenheit ermöglicht es den Benutzern, das Betriebssystem nach ihren eigenen
+        Bedürfnissen anzupassen und zu verbessern.
+    </p>
+
+</div>
+
+
+</html>

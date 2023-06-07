@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpu-Kühler</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -115%;
+            margin-top: -15%;
+            margin-left: 75%;
+
+        }
+
+        .pc {
+            border: solid #fff 5px;
+
+        }
+
+
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+
+        .server4 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Der CPU-Kühler</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="luft oder wasser.jpg" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="luft 1.webp" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="wasser 2.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="wasser 3.jpg" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="luft 4.webp" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server2" src="wasser 5.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server4" src="luftt 6.jpg"Setup" style="width: 70%;">
+
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            In einem PC kommen unterschiedliche Arten von Kühlungssystemen zum Einsatz, um die Temperatur des
+            Prozessors, insbesondere bei intensiver Nutzung, effektiv zu kontrollieren. Zu den gängigen Kühlungsmethoden
+            gehören die Verwendung von CPU-Wasserkühlern und CPU-Luftkühlern. Hier sind Informationen über beide Systeme
+            und ihre Funktionen:
+        </p>
+        <br> <br>
+        <p>
+            CPU-Wasserkühler:
+            Ein CPU-Wasserkühler, auch als AIO (All-in-One) Wasserkühler bezeichnet, besteht aus einer Kombination aus
+            einem Kühlblock, einer Pumpe und einem Radiator. Hier ist, wie es funktioniert:
+        </p>
+        <br> <br>
+        <li>
+            Kühlblock: Der Kühlblock ist mit dem Prozessor verbunden und besteht aus einer Metallplatte, die die
+            Wärme
+            vom Prozessor aufnimmt. Diese Wärme wird an das Kühlmittel übertragen, das in Rohren oder Schläuchen
+            zirkuliert.
+        </li>
+        <br>
+        <li>
+            Pumpe: Die Pumpe im CPU-Wasserkühler sorgt für den kontinuierlichen Fluss des Kühlmittels. Sie bewegt
+            das kühle Kühlmittel vom Radiator zum Kühlblock und trägt zur effizienten Wärmeableitung bei.
+        </li>
+        <br>
+        <li>
+            Radiator: Der Radiator ist ein Wärmetauscher, der die Wärme vom Kühlmittel abführt. Er besteht aus
+            Metallrippen und Kühlkanälen, die den Luftstrom fördern. Ventilatoren am Radiator entfernen die Wärme, indem
+            sie die warme Luft abführen und frische Luft durch den Radiator ziehen.
+
+        </li>
+        <br> <br> <br> <br>
+        <p>
+            Die Funktion des CPU-Wasserkühlers besteht darin, die Wärme effektiv vom Prozessor abzuleiten und eine
+            bessere Kühlleistung im Vergleich zu Luftkühlern zu bieten. Sie können in der Regel auch leiser sein, da die
+            Lüfter mit niedrigeren Drehzahlen arbeiten können.
+        </p>
+        <br> <br>
+        <p>
+            CPU-Luftkühler:
+            Ein CPU-Luftkühler besteht aus einem Kühlkörper, Heatpipes und einem Lüfter. Hier ist, wie es funktioniert:
+        </p>
+        <br> <br>
+        <li>
+            Kühlkörper: Der Kühlkörper besteht aus Metallrippen, die die Wärme vom Prozessor aufnehmen und sie effizient
+            verteilen. Die größere Oberfläche des Kühlkörpers ermöglicht eine bessere Wärmeableitung.
+        </li>
+        <br>
+        <li>
+            Heatpipes: Heatpipes sind röhrenförmige Strukturen, die im Kühlkörper eingebettet sind und die Wärme vom
+            Prozessor zu den Kühlrippen leiten. Sie verwenden eine Kombination aus Wärmeleitung und
+            Verdampfung/Verkondensation des Kühlmittels in ihrem Inneren, um die Wärme effektiv abzuführen.
+        </li>
+        <br>
+        <li>
+            Lüfter: Der Lüfter sitzt auf dem Kühlkörper und erzeugt einen Luftstrom, der die Wärme von den Kühlrippen
+            abführt. Die Lüftergeschwindigkeit kann je nach Temperatur gesteuert werden, um die Kühlleistung anzupassen.
+        </li>
+        <br> <br> <br> <br>
+        <p>
+            Der CPU-Luftkühler arbeitet effektiv, um die Wärme des Prozessors abzuleiten und eine ausreichende Kühlung
+            zu gewährleisten. Sie sind in der Regel einfach zu installieren und erfordern keine zusätzliche Wartung wie
+            das Nachfüllen von Kühlflüssigkeit.
+        </p>
+        <br> <br>
+        <p>
+            Zusammenfassend lässt sich sagen, dass sowohl CPU-Wasserkühler als auch CPU-Luftkühler wichtige Funktionen
+            haben, um die Temperatur des Prozessors zu kontrollieren und eine optimale Leistung des Systems zu
+            gewährleisten. Die Wahl zwischen den beiden hängt von verschiedenen Faktoren wie Leistung, Geräuschpegel,
+            Budget und Präferenzen des Benutzers ab. Beide Methoden können dazu beitragen, eine stabile
+            Betriebstemperatur des Prozessors zu gewährleisten und eine Überhitzung zu verhindern.
+        </p>
+
+
+    </div>
+</body>
+
+</html>

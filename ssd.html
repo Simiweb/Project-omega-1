@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -155%;
+            margin-top: -15%;
+            margin-left: 75%;
+
+        }
+
+        .pc {
+            border: solid #fff 5px;
+
+        }
+
+
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+
+        .server4 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Der Speicher</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="SSD-vs-HDD-images.jpg" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="hdd 1.webp" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="ssd 2.jpeg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="ssd hdd 3.webp" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="SSD_vs_HDD-4.webp" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server2" src="ssd 5.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server4" src="ssd 6.jpg" Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server4" src="hdd 7.jpg" Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server4" src="ssd 8.jpg" Setup" style="width: 70%;">
+
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            In einem PC werden in der Regel zwei Arten von Speichermedien verwendet: Solid State Drives (SSDs) und Hard
+            Disk Drives (HDDs). Beide haben unterschiedliche Funktionsweisen und bieten verschiedene Vor- und Nachteile.
+            Hier sind Informationen über SSDs und HDDs sowie ihre Funktionen:
+        </p>
+        <br> <br>
+        <p>
+            Solid State Drive (SSD):
+            Ein Solid State Drive (SSD) verwendet Flash-Speicherchips, um Daten dauerhaft zu speichern. Hier ist, wie es
+            funktioniert:
+        </p>
+        <br> <br>
+        <li>
+            Flash-Speicher: SSDs verwenden NAND-Flash-Speicherchips, die elektrische Ladungen speichern, um Daten zu
+            halten. Diese Speicherchips sind ähnlich wie USB-Sticks aufgebaut, bieten jedoch eine höhere
+            Speicherkapazität und Geschwindigkeit.
+        </li>
+        <br>
+        <li>
+            Datenzugriff: SSDs ermöglichen schnellen und direkten Zugriff auf die gespeicherten Daten. Da sie keine
+            beweglichen Teile haben, sind sie im Vergleich zu HDDs schneller und bieten eine bessere Leistung bei Lese-
+            und Schreibvorgängen.
+        </li>
+        <br>
+        <li>
+            Geschwindigkeit: SSDs bieten eine deutlich schnellere Datenübertragung im Vergleich zu HDDs. Dies führt zu
+            schnellerem Hochfahren des Betriebssystems, kürzeren Ladezeiten von Anwendungen und insgesamt besserer
+            Systemreaktion.
+        </li>
+        <br>
+        <li>
+            Geräuschlos: Da SSDs keine mechanischen Teile haben, sind sie geräuschlos und erzeugen keine Vibrationen.
+        </li>
+        <br> <br> <br> <br>
+        <p>
+            SSDs sind ideal für die Verwendung als primärer Speicher, da sie eine hohe Leistung, schnellere
+            Datenübertragungsgeschwindigkeiten und einen geräuschlosen Betrieb bieten. Sie sind jedoch in der Regel
+            teurer pro Gigabyte im Vergleich zu HDDs.
+        </p>
+        <br> <br>
+        <p>
+            Hard Disk Drive (HDD):
+            Eine Hard Disk Drive (HDD) verwendet magnetische Platten und eine Lese-Schreibkopfmechanik, um Daten zu
+            speichern. Hier ist, wie es funktioniert:
+        </p>
+        <br> <br>
+        <li>
+            Magnetische Platten: HDDs bestehen aus mehreren magnetischen Platten, die drehen und Daten speichern. Jede
+            Platte hat eine Beschichtung, die magnetisiert wird, um die Daten zu speichern.
+        </li>
+        <br>
+        <li>
+            Lese-Schreibkopf: Die Lese-Schreibköpfe schweben knapp über den rotierenden Platten und lesen oder schreiben
+            die Daten durch Magnetisierung der Plattenoberfläche.
+        </li>
+        <br>
+        <li>
+            Datenzugriff: Der Zugriff auf die Daten in einer HDD erfordert mechanische Bewegungen, da die Platten drehen
+            und die Lese-Schreibköpfe positioniert werden müssen. Dies führt zu längeren Zugriffszeiten im Vergleich zu
+            SSDs.
+        </li>
+        <br>
+        <li>
+            Speicherkapazität: HDDs bieten in der Regel eine größere Speicherkapazität pro Preis im Vergleich zu SSDs.
+            Sie sind in größeren Größen erhältlich, was sie ideal für die Speicherung großer Datenmengen macht.
+        </li>
+        <br> <br> <br> <br>
+        <p>
+            HDDs eignen sich gut für die Massenspeicherung von Daten, bei denen die Geschwindigkeit weniger wichtig ist
+            als die Speicherkapazität. Sie sind in der Regel kostengünstiger als SSDs pro Gigabyte, bieten jedoch
+            geringere Lese- und Schreibgeschwindigkeiten und sind anfälliger für physische Stöße und Verschleiß.
+        </p>
+        <br> <br>
+        <p>
+            In vielen modernen PCs wird eine Kombination aus SSD und HDD verwendet, wobei die SSD für das Betriebssystem
+            und wichtige Anwendungen verwendet wird, um eine schnelle Leistung zu gewährleisten, während die HDD für die
+            Speicherung großer Dateien und Datenarchivierung genutzt wird.
+        </p>
+        <br> <br>
+        <p>
+            Zusammenfassend lässt sich sagen, dass SSDs und HDDs unterschiedliche Funktionen haben und in verschiedenen
+            Bereichen ihre Stärken haben. SSDs bieten schnellen Zugriff und hohe Leistung, während HDDs eine größere
+            Speicherkapazität zu einem niedrigeren Preis bieten. Die Wahl zwischen den beiden hängt von den
+            individuellen Bedürfnissen, dem Budget und der gewünschten Leistung ab.
+        </p>
+        <br>
+
+
+    </div>
+</body>
+
+</html>

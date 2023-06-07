@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Mainboard</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -110%;
+            margin-top: -5%;
+            margin-left: 75%;
+
+        }
+
+        .pc {
+            border: solid #fff 5px;
+            size: 100%;
+        }
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Das Mainboard</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="Mainboard-Aufmacher-neu.webp" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="mainboard 1.jpg" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="mainboard 2.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="mainboard 3.webp" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="mainboard 4.png" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server2" src="mainboard 5.jpg" alt="Setup" style="width: 70%;">
+
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            Das Mainboard, auch bekannt als Motherboard oder Hauptplatine, ist eine zentrale Komponente eines PCs. Es
+            hat eine Vielzahl von Funktionen, die für den Betrieb und die Kommunikation zwischen den verschiedenen
+            Hardwarekomponenten unerlässlich sind. Hier sind einige Informationen über das Mainboard und seine
+            Funktionen:
+        </p>
+        <br> <br>
+        <p>
+            1. Verbindungspunkt für Komponenten: Das Mainboard dient als zentrale Schnittstelle, um verschiedene
+            Hardwarekomponenten miteinander zu verbinden. Es bietet Steckplätze und Anschlüsse für den Prozessor (CPU),
+            den Arbeitsspeicher (RAM), die Grafikkarte, Festplatten, SSDs, optische Laufwerke, USB-Anschlüsse,
+            Ethernet-Ports und andere Erweiterungskarten.
+
+        </p>
+        <br> <br>
+        <p>
+            2. Kommunikation und Datenübertragung: Das Mainboard ermöglicht die Kommunikation und den Datenaustausch
+            zwischen den verschiedenen Komponenten des PCs. Es verfügt über Bussysteme wie den Front Side Bus (FSB) oder
+            den Direct Media Interface (DMI), die die Übertragung von Daten und Steuersignalen zwischen der CPU, dem
+            Arbeitsspeicher und anderen Komponenten ermöglichen.
+        </p>
+        <br> <br>
+        <p>
+            3. BIOS/UEFI: Das Mainboard beherbergt das Basic Input/Output System (BIOS) oder das Unified Extensible
+            Firmware Interface (UEFI). Diese Firmware ist für den Startvorgang des PCs verantwortlich und stellt
+            grundlegende Funktionen zur Hardwareerkennung, Initialisierung und Konfiguration bereit.
+        </p>
+        <br> <br>
+        <p>
+            4. Erweiterungsmöglichkeiten: Das Mainboard bietet Steckplätze für Erweiterungskarten, die es ermöglichen,
+            den Funktionsumfang des PCs zu erweitern. Dazu gehören Grafikkarten für verbesserte Grafikleistung,
+            Soundkarten für hochwertigen Klang, Netzwerkkarten für eine schnelle Internetverbindung und weitere
+            Erweiterungskarten für spezifische Anforderungen.
+        </p>
+        <br> <br>
+        <p>
+            5. Arbeitsspeicherunterstützung: Das Mainboard bietet Steckplätze für den Arbeitsspeicher (RAM). Es
+            unterstützt verschiedene Arten von RAM-Modulen wie DDR4, DDR3 usw. und ermöglicht die Erweiterung der
+            RAM-Kapazität, um eine verbesserte Leistung und Multitasking-Fähigkeiten zu bieten.
+        </p>
+        <br> <br>
+        <p>
+            6.Anschlüsse und Schnittstellen: Das Mainboard verfügt über verschiedene Anschlüsse und Schnittstellen, um
+            Peripheriegeräte wie Tastatur, Maus, USB-Geräte, Audioanschlüsse, Ethernet-Ports und mehr anzuschließen.
+            Diese Anschlüsse ermöglichen die Kommunikation zwischen dem PC und externen Geräten.
+        </p>
+        <br> <br>
+        <p>
+            7. Stromversorgung: Das Mainboard verfügt über einen Anschluss für das Netzteil, um den PC mit Strom zu
+            versorgen. Es verteilt den Strom an die verschiedenen Komponenten und sorgt für eine stabile und
+            ausreichende Stromversorgung.
+        </p>
+        <br> <br>
+        <p>
+            Zusammenfassend lässt sich sagen, dass das Mainboard die zentrale Schaltstelle eines PCs ist. Es ermöglicht
+            die Verbindung und Kommunikation zwischen den verschiedenen Hardwarekomponenten, bietet
+            Erweiterungsmöglichkeiten, unterstützt den Arbeitsspeicher und stellt Anschlüsse und Schnittstellen bereit.
+            Die Wahl eines geeigneten Mainboards ist wichtig, um Kompatibilität, Leistung und Erweiterbarkeit
+        </p>
+        <br> <br>
+    </div>
+</body>
+
+</html>

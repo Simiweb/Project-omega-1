@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Gehäuse</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            background-color: #060c21;
+            overflow-x: hidden;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            z-index: 4;
+            max-width: 1050px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .menu-items {
+            z-index: 4;
+            color: #fff;
+        }
+
+
+
+        .nav-container {
+            z-index: 4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 62px;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            display: flex;
+            color: #fff;
+        }
+
+        .navbar .nav-container li {
+            z-index: 4;
+            list-style: none;
+        }
+
+        .navbar .nav-container a {
+            z-index: 4;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.7rem;
+        }
+
+        .navbar .nav-container a:hover {
+            z-index: 4;
+            font-weight: bolder;
+        }
+
+        .nav-container {
+            z-index: 4;
+            display: block;
+            position: relative;
+            height: 60px;
+        }
+
+        .nav-container .checkbox {
+
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 27px;
+            left: -10%;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .nav-container .hamburger-lines {
+
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 27px;
+            left: -10%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .nav-container .hamburger-lines .line {
+            z-index: 4;
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .navbar .menu-items {
+            z-index: 4;
+            background-color: #000;
+            color: #fff;
+            padding-top: 120px;
+            height: 220vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        .navbar .menu-items li {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 4;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .nav-container input[type="checkbox"]:checked~.menu-items {
+            transform: translateX(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+
+        .nav-container input[type="checkbox"]:checked~.logo {
+            display: none;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding-bottom: 1%;
+            z-index: 4;
+        }
+
+        .navbar-text {
+            z-index: 4;
+            top: 40px;
+            font-size: x-large;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        .text {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 35%;
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .server {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        .img {
+            position: relative;
+            max-width: 60%;
+            min-width: 15%;
+            min-height: 15%;
+            margin-bottom: -125%;
+            margin-top: -15%;
+            margin-left: 75%;
+
+        }
+
+        .pc {
+            border: solid #fff 5px;
+            size: 100%;
+        }
+
+        .setup {
+            border: solid #fff 5px;
+
+        }
+
+        .in {
+            border: solid #fff 5px;
+
+        }
+
+        .full {
+            border: solid #fff 5px;
+
+        }
+
+        .server2 {
+            border: solid #fff 5px;
+
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-text">
+            <h1 style="font-size:50px">Das Gehäuse</h1>
+        </div>
+    </div>
+    <div class="server">
+        <img src="PC-Gehaeuse-Aufmacher-neu.webp" alt="software" style="width: 50%;" />
+    </div>
+
+    <div class="img">
+        <img class="pc" src="gehaüse.webp" alt="Pc" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="setup" src="gehäuse 1.jpg" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="in" src="gehäuse 2.webp" pc inside" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="full" src="gehäuse 3.avif" alt="Setup" style="width: 70%;">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <img class="server2" src="alienware4.jpg" alt="Setup" style="width: 70%;">
+
+    </div>
+    <div class="text">
+        <h1 style="font-size: 60px ;"></h1>
+        <p>
+            Das Gehäuse eines PCs ist ein äußerst wichtiges Komponente, da es nicht nur den Innenraum schützt, sondern
+            auch für die Funktionalität und den ästhetischen Aspekt des Computers von Bedeutung ist. Hier sind einige
+            Informationen über das Gehäuse eines PCs und seine Funktionen:
+        </p>
+        <br> <br>
+        <p>
+            1. Schutz der internen Komponenten: Das Gehäuse bietet einen physischen Schutz für die empfindlichen
+            internen Komponenten des PCs. Es hält Staub, Schmutz, Feuchtigkeit und andere potenziell schädliche Elemente
+            fern, die den Betrieb des Computers beeinträchtigen könnten.
+        </p>
+        <br> <br>
+        <p>
+            2. Unterstützung der Kühlung: Das Gehäuse ist so konstruiert, dass es eine ordnungsgemäße Kühlung der
+            Komponenten ermöglicht. Es verfügt über Lüftungsöffnungen, die einen Luftstrom ermöglichen, um Wärme
+            abzuführen und Überhitzung zu vermeiden. Einige Gehäuse sind mit zusätzlichen Lüftern oder
+            Wasserkühlungssystemen ausgestattet, um die Kühlleistung zu verbessern.
+        </p>
+        <br> <br>
+        <p>
+            3. Erweiterbarkeit und Anpassungsfähigkeit: Das Gehäuse bietet Platz und Montagepunkte für verschiedene
+            Komponenten wie Motherboard, Festplatten, Grafikkarten, Netzteil usw. Es ermöglicht die Erweiterung des
+            Systems durch Hinzufügen neuer Hardware und unterstützt verschiedene Formfaktoren, sodass verschiedene
+            Komponenten in das Gehäuse passen.
+        </p>
+        <br> <br>
+        <p>
+            4. Cable Management: Ein gutes Gehäuse bietet auch Möglichkeiten für ein ordentliches Kabelmanagement. Das
+            bedeutet, dass die Kabel im Inneren des Gehäuses sauber und organisiert verlegt werden können, was nicht nur
+            für ein aufgeräumtes Erscheinungsbild sorgt, sondern auch den Luftstrom verbessert und die Kühlung
+            optimiert.
+        </p>
+        <br> <br>
+        <p>
+            5. Geräuschdämmung: Manche Gehäuse sind mit Schalldämmungsmaterialien ausgestattet, um die
+            Geräuschentwicklung des PCs zu reduzieren. Diese Materialien absorbieren den Schall und verhindern, dass er
+            nach außen dringt, was zu einem leiseren Betrieb führt.
+        </p>
+        <br> <br>
+        <p>
+            6. Design und ästhetische Aspekte: Das Gehäuse ist oft das sichtbarste Element eines PCs und kann in
+            verschiedenen Größen, Formen und Designs erhältlich sein. Es ermöglicht den individuellen Ausdruck und die
+            Anpassung an den persönlichen Geschmack des Benutzers. Viele Gehäuse verfügen über transparente
+            Seitenfenster, um den Blick auf die Komponenten im Inneren freizugeben und das System optisch ansprechend zu
+            gestalten.
+        </p>
+        <br> <br>
+        <p>
+            Zusammenfassend lässt sich sagen, dass das Gehäuse eines PCs nicht nur Schutz und Unterstützung für die
+            internen Komponenten bietet, sondern auch wichtige Funktionen wie Kühlung, Erweiterbarkeit, Kabelmanagement,
+            Geräuschdämmung und ästhetische Anpassungsmöglichkeiten ermöglicht. Die Auswahl eines geeigneten Gehäuses
+            ist daher entscheidend, um einen effizienten und zuverlässigen Computer zu gewährleisten.
+        </p>
+        <br> <br>
+    </div>
+</body>
+
+</html>
